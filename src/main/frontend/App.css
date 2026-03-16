@@ -1,0 +1,102 @@
+/* Estilos generales */
+.contenedor-principal {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.titulo-tienda {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Los cuadrados de los planes */
+.grilla-planes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cuadrado-plan {
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #f8f9fa;
+}
+
+.cuadrado-plan:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.precio {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.texto-clic {
+  font-size: 0.8em;
+  color: #6c757d;
+}
+
+/* La ventana más grande (Modal) */
+.fondo-ventana {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ventana-grande {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+
+.lista-horarios {
+  margin: 20px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.horario-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.horario-item.ocupado {
+  background-color: #ffdddd;
+  color: #999;
+}
+
+.btn-reservar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cerrar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
