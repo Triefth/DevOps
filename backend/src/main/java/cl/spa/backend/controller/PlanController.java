@@ -4,6 +4,7 @@ import cl.spa.backend.model.Plan;
 import cl.spa.backend.repository.PlanRepository;
 import java.util.List;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
 
 /**
  *
@@ -22,7 +23,8 @@ public class PlanController {
     }
     
     @GetMapping
-    public List<Plan> getPlanes(){
-        return repository.findAll();
+    public ResponseEntity<List<Plan>> getPlanes(){
+        List<Plan> planes = repository.findAll();
+        return ResponseEntity.ok(planes);
     }
 }
